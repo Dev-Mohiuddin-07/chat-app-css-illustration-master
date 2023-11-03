@@ -1,0 +1,293 @@
+
+:root{
+ --fontFamily: 'Rubik', sans-serif;
+ /* width */
+ --mobile-width: 375px;
+ --mobile-height: 936px;
+ --desktop-width: 1440px;
+ --desktop-height: 800px;
+ 
+ /*  Colors--Primary--Text   */
+--paleViolet: hsl(276, 100%, 81%);
+/*(sub-heading at the top of the app UI)*/
+--moderateViolet: hsl(276, 55%, 52%);
+/*(chat on the left)*/
+--desaturatedDarkViolet: hsl(271, 15%, 43%);
+/*(chat on the right)*/
+--grayishBlue: hsl(206, 6%, 79%);
+  /*(placeholder text)*/
+--veryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+  /*(main heading)*/
+--darkGrayishViolet: hsl(270, 7%, 64%);
+  /*(paragraph)*/
+  
+ /* Gradients
+These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient */
+
+--lightMagenta: hsl(293, 100%, 63%);
+--lightViolet: hsl(264, 100%, 61%);
+--chatBg: hsl(293, 100%, 63%, 0.1);
+--chatBg2: hsl(264, 100%, 61%, 0.1);
+
+/* Secondary*/
+
+--white: hsl(0, 0%, 100%);
+--lightGrayishViolet: hsl(270, 20%, 96%);
+/*(app background)*/
+--veryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+/*(submit button background)*/
+--veryLightMagenta: hsl(289, 100%, 72%);
+/*(radio button outline)*/
+ /*padding-/-margin*/
+ --pb-tb-pad: 10px;
+ --pb-lr-pad: 7px;
+ --pb-para-pad: 8px;
+ --pb-para-mar: 6px;
+ --pb-img-mar: 9px;
+ --pb-inpt-mar: 15px;
+}
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body{
+  font-family: var(--fontFamily);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ min-height: 100vh;
+}
+.bg-banner{
+ position: relative;
+ width: var(--mobile-width);
+ height: var(--mobile-height);
+ background-image: linear-gradient(to top, var(--white), var(--lightGrayishViolet));
+ overflow: hidden;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.bg-banner-design{
+ position: absolute;
+ width: 375px;
+ height: 500px;
+ background-color: #ccc;
+}
+.bg-banner .top{
+ top: 0;
+ left: -50%;
+ border-radius: 0 0 50% 50%;
+ background-image: linear-gradient(var(--lightMagenta), var(--lightViolet));
+}
+.bg-banner .bottom{
+ border-radius: 50% 50% 0 0;
+ bottom: 0;
+ right: -50%;
+ background-image: linear-gradient(var(--lightViolet), var(--lightMagenta));
+ opacity: 0.1;
+}
+.phone-container, .phone-description{
+ z-index: 10;
+}
+.phone-container{
+ font-size: .5em;
+ width: 230px;
+ height: 485px;
+ border: 10px solid var(--white);
+ border-radius: 30px;
+ margin-block-start: 65px;
+ background-image: linear-gradient(var(--white), var(--lightGrayishViolet));
+ box-shadow: 0px 25px 30px -20px rgba(0, 0, 0, 0.3);
+}
+.phone-header{
+ position: relative;
+ width: 100%;
+ height: 65px;
+ padding-inline: 15px;
+ padding-block-end: 12px;
+ border-radius: 20px 20px 5px 5px;
+ background-image: linear-gradient(to right, var(--lightViolet), var(--lightMagenta));
+ display: flex;
+ align-items: flex-end;
+ gap: 10px;
+}
+.header-popup{
+ position: absolute;
+ top: -5px;
+ left: 50%;
+ translate: -50% 0;
+ width: 130px;
+ height: 25px;
+ border-radius: 20px;
+ background-color: #FFF;
+}
+.phone-header-icon-left{
+ color: var(--white);
+ font-weight: 700;
+ margin-block-end: 7.5px;
+}
+.phone-header-icon-right{
+ position: absolute;
+ right: 15px;
+ bottom: 15px;
+ color: var(--white);
+ font-weight: 700;
+}
+.phone-header-img{
+ width: 24px;
+ height: 24px;
+ border: 1px solid var(--white);
+ border-radius: 50%;
+ background-color: #FFF;
+}
+.header-heading-box{
+ /* width: 72px; */
+ color: var(--white);
+}
+.header-heading-box span{
+ font-weight: 400;
+ color: var(--paleViolet);
+}
+.header-heading-box h2{
+ font-size: 1.4em;
+ font-weight: 700;
+}
+.phone-body{
+ padding-block: var(--pb-tb-pad);
+ padding-inline: var(--pb-lr-pad);
+}
+.body-left-para-box{
+ color: var(--moderateViolet);
+ max-width: 130px;
+ background-image: linear-gradient(to right, var(--chatBg2), var(--chatBg));
+ margin-block-end: var(--pb-para-mar);
+ padding: var(--pb-para-pad);
+ border-radius: 10px 10px 10px 5px;
+}
+.body-right-img-box{
+ display: flex;
+ justify-content: flex-end;
+ gap: 5px;
+}
+.body-right-img{
+ width: 40px;
+ height: 40px;
+ border-radius: 10px;
+ margin-block-start: var(--pb-img-mar);
+}
+.body-right-para-box{
+ display: flex;
+ justify-content: flex-end;
+ margin: var(--pb-para-mar);
+}
+.phone-body .last{
+ margin-block-end: var(--pb-img-mar);
+}
+.body-right-para-box p{
+ max-width: 125px;
+ padding: var(--pb-para-pad);
+ border-radius: 10px 10px 5px 10px;
+ background-color: var(--white);
+ color:  var(--desaturatedDarkViolet);
+}
+.body-left-design-para-box{
+ max-width: 160px;
+ background-image: linear-gradient(to right, var(--lightMagenta), var(--lightViolet));
+ margin-block-end: var(--pb-para-mar);
+ padding: var(--pb-para-pad);
+ border-radius: 10px 10px 10px 5px;
+ color: var(--white);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ gap: 10px;
+}
+.body-design-checkbox{
+ display: flex;
+ gap: 10px;
+ align-items: center;
+}
+.body-design-box-circle{
+ width: 14px;
+ height: 14px;
+ border-radius: 50%;
+ border: 1px solid var(--veryLightMagenta);
+}
+.body-design-box-price{
+ font-size: 1.5em;
+ font-weight: 700;
+ margin-inline-end: 10px;
+}
+.body-input-box{
+ position: relative;
+ height: 35px;
+ border-radius: 30px;
+ margin-block-start: var(--pb-inpt-mar);
+ background-color: var(--white);
+ color: var(--grayishBlue);
+ padding: var(--pb-para-pad);
+ padding-inline-start: 20px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.body-input-box p{
+ margin-block-start: 6px;
+}
+.input-box-button{
+ width: 24px;
+ height: 24px;
+ border-radius: 50%;
+ color: var(--white);
+ background-color: var(--veryDarkDesaturatedViolet);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-weight: 700;
+}
+.phone-description{
+ margin-inline: 35px;
+ margin-block: 70px;
+ text-align: center;
+}
+.description-heading{
+ color: var(--veryDarkDesaturatedViolet);
+ margin-block-end: 30px;
+}
+.description-para{
+ color: var(--darkGrayishViolet);
+ line-height: 25px;
+}
+
+@media screen and (min-width: 1024px){
+ .bg-banner{
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  max-width: var(--desktop-width);
+  max-height: var(--desktop-height);
+ }
+ .bg-banner-design{
+  width: 500px;
+  height: 700px;
+ }
+ .bg-banner .top{
+  top: 0;
+  left: -80px;
+ }
+ .bg-banner .bottom{
+  bottom: 0;
+  right: -80px;
+ }
+ .phone-container{
+  margin-inline-start: 364px;
+  margin-inline-end: 125px;
+ }
+ .phone-description{
+  text-align: left;
+  width: 445px;
+  margin-inline-end: 265px;
+ }
+} 
